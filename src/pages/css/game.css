@@ -1,0 +1,234 @@
+
+@media screen and (min-width: 768px) {
+    .main2{
+        height: 80%;
+        width: 25%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        background-color: blueviolet !important;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .line{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        width: 77%;
+        font-size: 40px;
+        font-weight: 700;
+        height: 80px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    h4{
+        display: flex;
+        align-self: center;
+        font-size: 20px;
+    }
+    .row{
+        border: 3px solid  black;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        font-size: 40px;
+        font-weight: 700;
+        justify-content: center;
+        
+        align-items: center;
+        border-radius: 5px;
+        background-color: darkgray !important;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+    .row:hover{
+        cursor: pointer;
+       
+    }
+    footer{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .btnleave{
+        background-color: crimson;
+        border-radius: 10px;
+        width: 180px;
+        height: 30px;
+        display: flex;
+        align-items: center;justify-content: center;
+    }
+    .btnleave:hover{
+        cursor: pointer;
+        color: aliceblue;
+    }
+    .disable{
+        border: 3px solid  black;
+        width: 100%;
+        height: 80%;
+        font-size: 40px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: rgb(58, 57, 57) !important;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+}
+
+/*phones*/
+@media screen and (max-width: 768px) {
+    .main2{
+        height: 80%;
+        width: 100%;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        background-color: blueviolet !important;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .line{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        width: 80%;
+        font-size: 25px;
+        color: #000;
+        font-weight: 600;
+        height: 80px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    h4{
+        display: flex;
+        align-self: center;
+        font-size: 20px;
+    }
+    .row{
+        border: 2px solid  black;
+        width: 30%;
+        height: 80%;
+        font-size: 22px;
+        color: #000;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: darkgray !important;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+    .row:hover{
+        cursor: pointer;
+        background-color: beige;
+    }
+    footer{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    .btnleave{
+        background-color: crimson;
+        border-radius: 10px;
+        width: 180px;
+        height: 35px;
+        display: flex;
+        align-items: center;justify-content: center;
+    }
+    .btnleave:hover{
+        cursor: pointer;
+        color: aliceblue;
+    }
+    .disable{
+        border: 3px solid  black;
+        width: 30%;
+        height: 80%;
+        font-size: 35px;
+        color: #000;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background-color: dimgray !important;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    }
+}
+
+.win{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.winh3{
+    font-size: 23px !important;
+    margin-top: 10%;
+    transition: 2s ;
+    animation: winh3 5s alternate infinite;
+}
+.btnwin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem !important;
+    margin-top: 5%;
+}
+.btnwin1, .btnwin2{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    width: 100px;
+    font-size: 20px !important;
+    text-align: center;
+}
+.btnwin1:hover, .btnwin2:hover{
+   cursor: pointer;
+   color: aliceblue;
+}
+.btnwin1:hover{
+    background-color: crimson;
+}
+.btnwin2:hover{
+    background-color: lawngreen;
+}
+@keyframes winh3 {
+ 0%{
+    color: wheat;
+    margin-left: -20px;
+    font-size: 22px !important;
+ }
+ 25%{
+    color: silver !important;
+    margin-left: 0px;
+    font-size: 23px !important;
+ }
+ 50%{
+    color: gainsboro !important;
+    margin-left: -20px;
+    font-size: 22px !important;
+ }
+ 100%{
+    color: dimgray !important;
+    margin-left: 0px;
+    font-size: 23px !important;
+ }
+}
