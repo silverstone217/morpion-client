@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext } from 'react';
 import './css/game.css';
 import { useNavigate } from "react-router-dom";
-//import axios from 'axios';
 import io  from "socket.io-client";
 import { userIn } from '../App';
 import { db } from '../firebase/Firebase';
@@ -203,53 +202,6 @@ const Game = () => {
         
       }, []);
 
-    /* useEffect(()=>{
-        
-        state.map(x=>{
-            if(x.room === room){
-                if(x.block === 'r1'){
-                    console.log('choix1', x.choix);
-                    setR1(x.choix);
-                }
-                if(x.block === 'r2'){
-                    setR2(x.choix);
-                    console.log('choix2', x.choix);
-                }
-                if(x.block === 'r3'){
-                    setR3(x.choix);
-                    console.log('choix3', x.choix);
-                }
-                if(x.block === 'r4'){
-                    setR4(x.choix);
-                    console.log('choix4', x.choix);
-                }
-                if(x.block === 'r5'){
-                    setR5(x.choix);
-                    console.log('choix5', x.choix);
-                }
-                if(x.block === 'r6'){
-                    setR6(x.choix);
-                    console.log('choix6', x.choix);
-                }
-                if(x.block === 'r7'){
-                    setR7(x.choix);
-                    console.log('choix7', x.choix);
-                }
-                if(x.block === 'r8'){
-                    setR8(x.choix);
-                    console.log('choix8', x.choix);
-                }
-                if(x.block === 'r9'){
-                    setR9(x.choix);
-                    console.log('choix9', x.choix);
-                }
-                return 1;
-            }
-            return 0
-        })
-        
-      }, [tours]);*/
-
 
     const playGame = async (choix, r, block)=>{
        
@@ -259,10 +211,8 @@ const Game = () => {
                 await setDoc(doc(db, "games", room),{
                     tour: 1,
                     cases: rooms.cases + 1
-                    //block: { block: block, choix: "X" },
-                }, {merge : true})/*.then(()=>{
-                    socket.emit('play', { block: block, choix: choix,room: room});
-                })*/
+                    
+                }, {merge : true})
                 .then( async ()=>{
                    await setDoc(doc(db, "games", room, "choix" , block ), {
                         block: block,
@@ -275,8 +225,7 @@ const Game = () => {
                     .catch(err=>console.log(err.message));
                 })
                 .catch(err=>console.log(err.message));
-                //console.log(r1, r2, r3, r4, r5, r6, r7, r8, r9)
-    
+            
                 console.log(state)
             }
     
@@ -286,10 +235,7 @@ const Game = () => {
                 await setDoc(doc(db, "games", room),{
                     tour: 0,
                     cases: rooms.cases + 1
-                   // block: { block: block, choix: "X" },
-                }, {merge : true})/*.then(()=>{
-                    socket.emit('play', { block: block, choix: choix,room: room});
-                })*/
+                }, {merge : true})
                 .then( async ()=>{
                    await setDoc(doc(db, "games", room, "choix" , block), {
                         block: block,
@@ -302,7 +248,6 @@ const Game = () => {
                     .catch(err=>console.log(err.message));
                 })
                 .catch(err=>console.log(err.message));
-                //console.log(r1, r2, r3, r4, r5, r6, r7, r8, r9)
     
                 console.log(state)
             }
@@ -312,7 +257,6 @@ const Game = () => {
         }
         
     }
-    //useEffect(()=>console.log(state), [state])
     const replayGame = async()=>{
         setR1("");
         setR2("");
@@ -328,7 +272,6 @@ const Game = () => {
             cases: 0,
             room: room,
             tour: 0,
-            //block: { block: block, choix: "X" },
         }).catch(err=>console.log(err) );
     }
    

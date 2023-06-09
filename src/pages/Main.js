@@ -15,6 +15,7 @@ const Main = () => {
 
     useEffect(() => {
         setUser(uuidv4());
+       
     }, [setUser])
     
     
@@ -27,23 +28,27 @@ const Main = () => {
             roomList.push({id:doc.id ,room: doc.data().room, joiner: doc.data().joiner});
         });
 
-            let r;
-            //console.log(rooms);
-            if(roomList.length > 0){
-                r = Math.floor(Math.random()*roomList.length)
+            
+       // console.log("Current rooms in CA: ", rooms.join(", "));
+            setRooms(roomList);
+            
+        })
+
+        return ()=>unsubscribe();
+    }, [setRooms, ]);
+
+    useEffect(()=>{
+        let r;
+            if(rooms.length > 0){
+                r = Math.floor(Math.random()*rooms.length)
                 //console.log(r);
-                setRoomId(roomList[r]);
-                setRoom(roomList[r].id);
+                setRoomId(rooms[r]);
+                setRoom(rooms[r].id);
             }
             else{
                 setRoomId("pas de room disponible");
             }
-       // console.log("Current rooms in CA: ", rooms.join(", "));
-            setRooms(roomList);
-        })
-
-        return ()=>unsubscribe();
-    }, [setRooms, roomId, setRoom]);
+    }, [roomId, setRoom, rooms])
 
     //create a new room
     const createRoom = async ()=>{

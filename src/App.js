@@ -18,7 +18,7 @@ const App = () => {
   
   return (
     <userIn.Provider value={{user, setUser, room, setRoom}}>
-        <BrowserRouter>
+        <BrowserRouter  >
           <Routes>
               <Route path='/' element={<Main/>} />
               {
