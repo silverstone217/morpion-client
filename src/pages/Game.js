@@ -7,7 +7,7 @@ import { userIn } from '../App';
 import { db } from '../firebase/Firebase';
 import { collection, query, where, onSnapshot, setDoc, doc } from "firebase/firestore";
 
-const socket = io.connect('http://localhost:4000');
+const socket = io.connect('https://morpion-4ill.onrender.com');
 
 
 const Game = () => {
