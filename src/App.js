@@ -21,7 +21,11 @@ const App = () => {
         <BrowserRouter>
           <Routes>
               <Route path='/' element={<Main/>} />
-              <Route path={ room !== null ? "/game": "/"} element={ room !== null ? <Game/> : <Main/>}/>
+              {
+                 room !== null && (
+                  <Route path={ "/game"} element={ <Game/>}/>
+                )
+              }
               <Route path='/*' element={<Main/>} />
           </Routes>
       </BrowserRouter>
