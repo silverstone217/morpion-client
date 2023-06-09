@@ -15,26 +15,9 @@ const Main = () => {
 
     useEffect(() => {
         setUser(uuidv4());
-    }, [])
+    }, [setUser])
     
     
-      //get ramdom room
-   /*useEffect(()=>{
-        const getRoom = async ()=>{
-            let r;
-            //console.log(rooms);
-            if(rooms.length > 0){
-                r = Math.floor(Math.random()*rooms.length)
-                //console.log(r);
-                setRoomId(rooms[r]);
-            }
-            else{
-                setRoomId("pas de room disponible");
-            }
-        }
-        return ()=> getRoom();
-    }, [rooms, roomId]);*/
-
     //get all rooms
     useEffect(() =>{
         const q = query(collection(db, "games"), where("joiner", "==", null));
@@ -60,7 +43,7 @@ const Main = () => {
         })
 
         return ()=>unsubscribe();
-    }, []);
+    }, [setRooms, roomId, setRoom]);
 
     //create a new room
     const createRoom = async ()=>{

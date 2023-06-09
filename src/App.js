@@ -1,5 +1,5 @@
-import React, { useEffect, useState, createContext, useContext } from 'react';
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
+import React, { useEffect, useState, createContext } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './pages/Main';
 import Game from './pages/Game';
 import { v4 as uuidv4 } from 'uuid'

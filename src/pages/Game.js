@@ -24,7 +24,7 @@ const Game = () => {
     if(!room){
       return  navigate('/');
     }
-   }, [room]);
+   }, [room, navigate]);
 
   
     // user join room
@@ -73,7 +73,7 @@ const Game = () => {
         })
 
         return ()=>unsubscribe();
-    }, []);
+    }, [setRooms, setTours, setCases, room]);
 
     useEffect(() =>{
         const parentRef = doc(db, 'games', room);
@@ -91,7 +91,7 @@ const Game = () => {
         })
 
         return ()=>unsubscribe();
-    }, []);
+    }, [setState, room]);
 
     useEffect(()=>{
             // "X player won"
